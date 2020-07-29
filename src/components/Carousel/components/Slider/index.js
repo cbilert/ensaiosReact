@@ -32,7 +32,7 @@ const Container = styled.ul`
 export const SliderItem = styled.li`
   margin-right: 16px;
   img {
-    margin: 16px;
+    margin: 0;
     width: 298px;
     height: 197px;
     object-fit: cover;
