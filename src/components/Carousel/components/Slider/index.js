@@ -25,8 +25,14 @@ const Container = styled.ul`
   .slick-next {
     right: 16px;
   }
-  .slick-list {  
-    overflow: visible !important; }
+  .slick-list
+{
+    position: relative;
+    display: block;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+}
 `;
 
 export const SliderItem = styled.li`

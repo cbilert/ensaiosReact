@@ -24,7 +24,6 @@ function Carousel({
           }
         </>
       )}
-      <>
       <Slider>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
@@ -42,7 +41,6 @@ function Carousel({
           );
         })}
       </Slider>
-      </>
     </VideoCardGroupContainer>
   );
 }

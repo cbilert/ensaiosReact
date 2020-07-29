@@ -4,10 +4,12 @@ import Footer from '../../components/Footer';
 import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
+import { Container } from './style';
+
 
 function Home() {
   return (
-    <div style={{ background:"#141414" }}>
+    <Container>
       <Menu/>
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
@@ -40,7 +42,7 @@ function Home() {
       />  
 
       <Footer/>    
-    </div>
+    </Container>
   );
 }
 
