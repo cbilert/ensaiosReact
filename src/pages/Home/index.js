@@ -14,7 +14,7 @@ function Home() {
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"}
+        videoDescription={"Quando o assunto é investimento em inovação, Israel só fica atrás da Suíça, segundo dados do Fórum Econômico Mundial. No universo ‘agritech’, o país do Oriente Médio é berço de startups com tecnologias que desenvolvem desde os mais modernos drones até o uso de inteligência artificial nas lavouras. Confira o quarto episódio da série Conexão Israel."}
       />
       <Carousel
         ignoreFirstVideo
