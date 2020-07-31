@@ -31,10 +31,12 @@ function CadastroCategoria() {
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
       const URL = 'https://agroflix.herokuapp.com/categorias';
+      console.log(URL);
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
             const resposta = await respostaDoServer.json();
+            console.log(resposta);
             setCategorias([
               ...resposta,
             ]);
@@ -50,6 +52,7 @@ function CadastroCategoria() {
       <h1>Cadastro de Categoria</h1>
       <form onSubmit={function handleSubmit(infosDoEvento) {
         infosDoEvento.preventDefault();
+
         setCategorias([
           ...categorias,
           values,
@@ -95,7 +98,7 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((categoria) => (
           <li key={`${categoria.nome}`}>
-            {categoria.nome}
+            {categoria.titulo}
           </li>
         ))}
       </ul>
