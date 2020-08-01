@@ -2,6 +2,17 @@ import config from '../config';
 
 const URL_CATEGORIES = `${config.URL_BACKEND}/categorias`;
 
+function getAll() {
+  return fetch(URL_CATEGORIES)
+    .then(async (respostaDoServidor) => {
+      if (respostaDoServidor.ok) {
+        const resposta = await respostaDoServidor.json();
+        return resposta;
+      }
+      throw new Error('Não foi possível carregar os dados.');// TODO retornar corretamente o erro da API
+    });
+}
+
 function getAllWithVideos() {
   return fetch(`${URL_CATEGORIES}?_embed=videos`)
     .then(async (respostaDoServidor) => {
@@ -9,10 +20,11 @@ function getAllWithVideos() {
         const resposta = await respostaDoServidor.json();
         return resposta;
       }
-      throw new Error('Não foi possível carregar os dados.');//TODO retornar corretamente o erro da API
+      throw new Error('Não foi possível carregar os dados.');// TODO retornar corretamente o erro da API
     });
 }
 
 export default {
   getAllWithVideos,
+  getAll,
 };
