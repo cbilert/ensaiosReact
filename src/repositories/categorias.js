@@ -42,7 +42,6 @@ function create(objetoDaCategoria) {
 }
 
 function update(objetoDaCategoria) {
-  console.log(objetoDaCategoria);
   return fetch(`${URL_CATEGORIES}/${objetoDaCategoria.id}`, {
     method: 'PUT',
     headers: {
@@ -60,7 +59,6 @@ function update(objetoDaCategoria) {
 }
 
 function remove(idDaCategoria) {
-  console.log(idDaCategoria);
   return fetch(`${URL_CATEGORIES}/${idDaCategoria}`, {
     method: 'DELETE',
   })

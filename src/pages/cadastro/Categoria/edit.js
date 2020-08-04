@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useHistory } from 'react-router-dom';
-import styled from 'styled-components';
 import Button from '../../../components/Button';
-import Table from '../../../components/Table';
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
@@ -12,7 +10,6 @@ function EditaCategoria() {
   const { id } = useParams();
   const history = useHistory();
   const valoresIniciais = {
-    id: 0,
     titulo: '',
     descricao: '',
     cor: '#000000',

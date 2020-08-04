@@ -3,17 +3,14 @@
     {
       "id": 1,
       "titulo": "Front End",
-      "descricao": "sdfasdf",
+      "descricao": "Vídeos sobre front end",
       "cor": "#6BD1FF"
     },
     {
       "id": 2,
       "titulo": "Back End",
-      "cor": "#00C86F",
-      "link_extra": {
-        "text": "Cursos de Back End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
-      }
+      "descricao": "Vídeos sobre Back End",
+      "cor": "#00C86F"
     },
     {
       "id": 3,
@@ -34,36 +31,6 @@
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
-    },
-    {
-      "id": 6,
-      "titulo": "MILHO",
-      "descricao": "COR MILHO",
-      "cor": "#ff9900"
-    },
-    {
-      "id": 7,
-      "titulo": "azul",
-      "descricao": "azul",
-      "cor": "#0234d2"
-    },
-    {
-      "titulo": "asdf",
-      "descricao": "asdf",
-      "cor": "#808080",
-      "id": 8
-    },
-    {
-      "titulo": "asdf",
-      "descricao": "asdf",
-      "cor": "#c0c0c0",
-      "id": 9
-    },
-    {
-      "id": 10,
-      "titulo": "Teste",
-      "descricao": "descrição\nCategoria de teste ",
-      "cor": "#32cd32"
     }
   ],
   "videos": [

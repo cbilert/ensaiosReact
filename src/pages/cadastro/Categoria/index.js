@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Link, useHistory,
+  Link, useHistory, useRouteMatch,
 } from 'react-router-dom';
 import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
@@ -11,11 +11,8 @@ import categoriasRepository from '../../../repositories/categorias';
 import Table from '../../../components/Table';
 import '../../../components/Menu/Menu.css';
 
-function getBackgroundColor(color) {
-  return color;
-}
-
 function CadastroCategoria() {
+  const path = useRouteMatch();
   const history = useHistory();
   const [categorias, setCategorias] = useState([]);
   const valoresIniciais = {
@@ -27,6 +24,21 @@ function CadastroCategoria() {
   const Divider = styled.div`
     padding-top: 50px;
   `;
+
+  function handleDelete(categoria) {
+    categoriasRepository.remove(categoria.id)
+      .then(() => {
+        const index = categorias.indexOf(categoria);
+        if (index !== -1) {
+          categorias.splice(index, 1);
+          setCategorias([
+            ...categorias,
+          ]);
+        }
+      });
+
+    clearForm(valoresIniciais);
+  }
 
   useEffect(() => {
     const URL = window.location.href.includes('localhost') ? 'http://localhost:8080/categorias' : 'https://agroflix.herokuapp.com/categorias';
@@ -53,7 +65,7 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-        categoriasRepository.update({
+        categoriasRepository.create({
           id: values.id,
           titulo: values.titulo,
           descricao: values.descricao,
@@ -119,7 +131,7 @@ function CadastroCategoria() {
               <td style={{ textAlign: 'center', backgroundColor: categoria.cor }}>{categoria.cor}</td>
               <td style={{ textAlign: 'center' }}>
                 <Link className="ActionButtonEdit" to={`/edita/categoria/${categoria.id}`}>Editar</Link>
-                <Link className="ActionButtonExcluir" to={`/edita/categoria/${categoria.id}`}>Excluir</Link>
+                <Link className="ActionButtonExcluir" to={path.url} onClick={() => handleDelete(categoria)}>Excluir</Link>
               </td>
             </tr>
           ))}
