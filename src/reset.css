@@ -9,9 +9,17 @@
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
+  --grayDark: #141414;
+  --grayHalf: #53585D;
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
+  --chilliRed: #C21807;
+  --imperialRed: #ED2939;
+  --orange: #FC6600;
+  --orangeTiger: #FD6A02;
+  --orangeSalamander: #F05E23;
+
 }
 
 html,
@@ -28,4 +36,47 @@ a {
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
   flex-direction: column;
+}
+
+
+.ActionButtonExcluir {
+  background-color: var(--grayMedium);
+  color: var(--chilliRed);
+  border: 1px solid var(--chilliRed);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 10px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity .3s;
+}
+.ActionButtonExcluir:hover,
+.ActionButtonExcluir:focus {
+    opacity: .5;
+}
+
+.ActionButtonEdit {
+background-color: var(--grayMedium);
+color: var(--orangeTiger);
+border: 1px solid var(--orangeTiger);
+box-sizing: border-box;
+cursor: pointer;
+padding: 10px 24px;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+outline: none;
+border-radius: 5px;
+text-decoration: none;
+display: inline-block;
+transition: opacity .3s;
+}
+.ActionButtonEdit:hover,
+.ActionButtonEdit:focus {
+    opacity: .5;
 }

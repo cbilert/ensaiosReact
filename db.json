@@ -3,11 +3,8 @@
     {
       "id": 1,
       "titulo": "Front End",
-      "cor": "#6BD1FF",
-      "link_extra": {
-        "text": "Formação de Front End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
+      "descricao": "sdfasdf",
+      "cor": "#6BD1FF"
     },
     {
       "id": 2,
@@ -21,11 +18,8 @@
     {
       "id": 3,
       "titulo": "Data Science e Inteligência Artificial",
-      "cor": "#9cd33b",
-      "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/cursos-online-mobile"
-      }
+      "descricao": "Descrição data science...",
+      "cor": "#9900ff"
     },
     {
       "id": 4,
@@ -40,6 +34,36 @@
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
+    },
+    {
+      "id": 6,
+      "titulo": "MILHO",
+      "descricao": "COR MILHO",
+      "cor": "#ff9900"
+    },
+    {
+      "id": 7,
+      "titulo": "azul",
+      "descricao": "azul",
+      "cor": "#0234d2"
+    },
+    {
+      "titulo": "asdf",
+      "descricao": "asdf",
+      "cor": "#808080",
+      "id": 8
+    },
+    {
+      "titulo": "asdf",
+      "descricao": "asdf",
+      "cor": "#c0c0c0",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "titulo": "Teste",
+      "descricao": "descrição\nCategoria de teste ",
+      "cor": "#32cd32"
     }
   ],
   "videos": [
@@ -192,6 +216,12 @@
       "url": "https://youtu.be/hhQ3RtvmfEg",
       "categoriaId": 1,
       "id": 25
+    },
+    {
+      "titulo": "asdf",
+      "url": "sdf",
+      "categoriaId": 1,
+      "id": 26
     }
   ]
 }

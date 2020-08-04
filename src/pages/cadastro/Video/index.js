@@ -28,12 +28,10 @@ function CadastroVideo() {
   return (
     <PageDefault>
       <h1>Cadastro de Vídeo</h1>
-      <form onSubmit={(event) => {
+      <form onSubmit={function handleEvent(event) {
         event.preventDefault();
 
-        const categoriaEscolhida = categorias.find((categoria) => {
-          return categoria.titulo === values.categoria;
-        });
+        const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === values.categoria);
 
         videosRepository.create({
           titulo: values.titulo,

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
   overflow: hidden;
-  background: #141414;
+  background: var(--grayDark);
   padding-bottom: 50px;
-`
-;
+`;
+
+export default Container;
